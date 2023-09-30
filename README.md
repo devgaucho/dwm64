@@ -1,5 +1,5 @@
 # dwm v6.4
-## Instalar
+## Compilar e instalar
 	sh make
 
 ## Configurações
