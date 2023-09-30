@@ -1,9 +1,9 @@
 # dwm v6.4
 ## Instalar
-    git clone https://github.com/phpbell/dwm.git && cd dwm && sh make
+	sh make
 
 ## Configurações
-    nano config.h
+	nano config.h
 
 ## .profile
 
