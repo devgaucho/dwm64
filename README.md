@@ -26,7 +26,7 @@ while true; do
     bat="$(acpi -b)"
     mem="$(free -h --si | awk '(NR==2){ print $3 }')"
     data="$(php '/home/gaucho/Área de Trabalho/www/dwm/data.php')"
-    cpu="$(mpstat | awk '(NR==4){ print $4 }')"
+    cpu="$(python3 '/home/gaucho/Área de Trabalho/www/dwm/cpu.py')"
     status="$(echo "$bat, CPU: $cpu%, Mem: $mem ~ $data")"
     xsetroot -name " $(echo $status | xargs) "
     sleep 1s
