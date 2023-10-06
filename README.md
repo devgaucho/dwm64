@@ -12,6 +12,10 @@
 export _JAVA_AWT_WM_NONREPARENTING=1 
 
 # aviso de bateria descarregando
+# resolve o bug de apps java
+export _JAVA_AWT_WM_NONREPARENTING=1 
+
+# aviso de bateria descarregando
 while true; do
     BATT=$( acpi -b | awk '{ split($5,a,":"); print substr($4,0,2)}')
     STATUS=$( acpi -b | awk '{ split($5,a,":"); print substr($3,0,2)}')
@@ -34,6 +38,6 @@ done &
 
 # programas
 setsid alarm-clock-applet &
-setsid google-chrome-stable %U &
+setsid sensible-browser &
 setsid nitrogen --restore &
 ```

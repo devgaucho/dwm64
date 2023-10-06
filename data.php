@@ -20,10 +20,10 @@ switch($dia_por_extenso){
     $dia_por_extenso='Viernes/Sexta';
     break;
     case 6:
-    $dia_por_extenso='Sábado';
+    $dia_por_extenso='Sábado/Sábado';
     break;
     case 7:
-    $dia_por_extenso='Domingo';
+    $dia_por_extenso='Domingo/Domingo';
     break;
 }
 $dia_por_extenso_em_ingles=date('l',$time);
