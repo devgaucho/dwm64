@@ -8,10 +8,8 @@
 ## .profile
 
 ```bash
-# resolve o bug de apps java
-export _JAVA_AWT_WM_NONREPARENTING=1 
+# DWM AQUI:
 
-# aviso de bateria descarregando
 # resolve o bug de apps java
 export _JAVA_AWT_WM_NONREPARENTING=1 
 
@@ -29,15 +27,16 @@ done &
 while true; do
     bat="$(acpi -b)"
     mem="$(free -h --si | awk '(NR==2){ print $3 }')"
-    data="$(php '/home/gaucho/Área de Trabalho/www/dwm/data.php')"
-    cpu="$(python3 '/home/gaucho/Área de Trabalho/www/dwm/cpu.py')"
-    status="$(echo "$bat, CPU: $cpu%, Mem: $mem ~ $data")"
+    data="$(php '/opt/home/Área de Trabalho/www/dwm/data.php')"
+    status="$(echo "$bat, Mem: $mem ~ $data")"
     xsetroot -name " $(echo $status | xargs) "
     sleep 1s
 done &
 
 # programas
 setsid alarm-clock-applet &
-setsid sensible-browser &
+setsid firefox &
+setsid pavucontrol &
+setsid rhythmbox &
 setsid nitrogen --restore &
 ```
