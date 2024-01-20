@@ -36,7 +36,7 @@ done &
 # programas
 setsid alarm-clock-applet &
 setsid chromium &
-setsid pavucontrol &
+setsid xfce4-volumed &
 setsid rhythmbox &
 setsid nitrogen --restore &
 ```
