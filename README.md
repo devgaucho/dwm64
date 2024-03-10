@@ -5,6 +5,16 @@
 ## Configurações
 	nano config.h
 
+## Scroll
+
+https://wiki.gentoo.org/wiki/Libinput
+
+## pegar o nome certo dos programas (config.h):
+
+```
+xprop WM_CLASS
+```
+
 ## .profile
 
 ```bash
@@ -27,7 +37,7 @@ done &
 while true; do
     bat="$(acpi -b)"
     mem="$(free -h --si | awk '(NR==2){ print $3 }')"
-    data="$(php '/opt/home/Área de Trabalho/www/dwm/data.php')"
+    data="$(php '/home/gaucho/Downloads/dwm64/data.php')"
     status="$(echo "$bat, Mem: $mem ~ $data")"
     xsetroot -name " $(echo $status | xargs) "
     sleep 1s
@@ -38,5 +48,6 @@ setsid alarm-clock-applet &
 setsid chromium &
 setsid xfce4-volumed &
 setsid rhythmbox &
+setsid pavucontrol &
 setsid nitrogen --restore &
 ```

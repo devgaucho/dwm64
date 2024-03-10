@@ -26,10 +26,12 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ NULL,         NULL,       "google-chrome-stable %U",  1,          False,      -1 },
-	{ NULL,         NULL,       "subl",     2,          False,      -1 },
-	{ NULL,         NULL,       "alarm-clock-applet",      5,          False,      -1 },
+	/* class      	instance    			class/title       	tags mask     	isfloating   monitor */
+	{ NULL,         "chromium-browser",       	"Chromium-browser",  	1,         	False,      -1 },
+	{ NULL,         "sun-awt-X11-XFramePeer",       "jetbrains-phpstorm",   2,          	False,      -1 },
+	{ NULL,         "rhythmbox", 			"Rhythmbox",   		7,          	False,      -1 },
+	{ NULL,         "pavucontrol", 			"Pavucontrol",   	8,          	False,      -1 },
+	{ NULL,         "alarm-clock-applet", 		"Alarm-clock-applet",   9,          	False,      -1 },
 };
 
 /* layout(s) */
